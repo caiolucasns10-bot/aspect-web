@@ -162,7 +162,11 @@ body.tv .sc{display:none}
 #pl:not(.ui){cursor:none}
 #pe{position:absolute;inset:0;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#0b0908ee;text-align:center;padding:30px}
 #pe .btn{background:var(--rd);color:#fff}
-#pe span{color:var(--mu)}
+#pe span{color:var(--mu);max-width:34rem;line-height:1.4}
+#pe .row2{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+#pe #dg{background:#ffffff1f}
+#pe pre{max-width:min(94vw,40rem);max-height:38vh;overflow:auto;margin:0;padding:.7rem .9rem;border-radius:.5rem;background:#000b;border:1px solid #ffffff22;color:#cfc6b8;font:12px/1.45 ui-monospace,Menlo,Consolas,monospace;text-align:left;white-space:pre-wrap;word-break:break-all}
+.chan{content-visibility:auto;contain-intrinsic-size:auto 4.6rem}
 #pl .bk{position:absolute;z-index:7;top:0;left:0;right:0;display:flex;gap:12px;align-items:center;padding:calc(12px + var(--sat)) max(14px,3vw,var(--sar)) 38px max(14px,3vw,var(--sal));background:linear-gradient(#0b0908d9,transparent);pointer-events:none;transition:opacity .25s}
 #pl:not(.ui) .bk{opacity:0}
 #pl .bk .ib,#pl .bk .tt{pointer-events:auto}
@@ -334,7 +338,7 @@ body.tv #nxe{font-size:1.1rem;bottom:8rem}
 
 <div id="modal" class="hidden"></div>
 
-<div id="pl" hidden tabindex="-1"><video id="v" playsinline autoplay></video><div class="bk"><button class="ib" id="pb" data-ic="chev" aria-label="Voltar"></button><div class="tt"><span id="pt"></span><span id="ps"></span></div><span id="lvb" class="lvb" hidden>AO VIVO</span></div><div id="bf" hidden><i></i><span id="bft">Carregando…</span></div><button id="bigp" data-a="pp" data-ic="bigplay" aria-label="Reproduzir" hidden></button><div id="osd"></div><div id="pe" hidden><b>Não foi possível reproduzir este conteúdo.</b><span>O servidor pode estar lento ou o formato não é compatível.</span><button class="btn" id="rt">Tentar novamente</button></div><div id="hud"><div class="hb"><span id="ht">0:00</span><div class="pbar" id="pbar" tabindex="0"><s id="pbuf"></s><u id="pu"></u><em id="ptip"></em></div><span id="hr2"></span></div><div class="cb"><button id="ppb" data-a="pp" aria-label="Reproduzir"></button><button data-a="bw" data-ic="bw" aria-label="Voltar 10 segundos"></button><button data-a="fw" data-ic="fw" aria-label="Avançar 10 segundos"></button><button class="zp" data-a="zd" data-ic="zd" aria-label="Canal anterior"></button><button class="zp" data-a="zu" data-ic="zu" aria-label="Próximo canal"></button><button class="zp" id="fvb" data-a="fv" aria-label="Favoritar canal">☆</button><button id="mub" data-a="mu" aria-label="Mudo"></button><input id="vol" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume"><span class="sp"></span><button id="nxb" data-a="nx" data-ic="nx" aria-label="Próximo episódio" hidden></button><button id="cc" data-a="cc" data-ic="cc" aria-label="Legendas"></button><button id="stb" data-a="st" data-ic="gear" aria-label="Configurações"></button><button id="pipb" data-a="pip" data-ic="pip" aria-label="Picture in Picture" hidden></button><button id="fsb" data-a="fs" aria-label="Tela cheia"></button></div></div><button id="nxe" hidden><small>▶ Próximo episódio</small><b></b></button><div id="sm" hidden></div><input type="file" id="sf" accept=".srt,.vtt,text/vtt" hidden></div>
+<div id="pl" hidden tabindex="-1"><video id="v" playsinline autoplay></video><div class="bk"><button class="ib" id="pb" data-ic="chev" aria-label="Voltar"></button><div class="tt"><span id="pt"></span><span id="ps"></span></div><span id="lvb" class="lvb" hidden>AO VIVO</span></div><div id="bf" hidden><i></i><span id="bft">Carregando…</span></div><button id="bigp" data-a="pp" data-ic="bigplay" aria-label="Reproduzir" hidden></button><div id="osd"></div><div id="pe" hidden><b>Não foi possível reproduzir este conteúdo.</b><span>O servidor pode estar lento ou o formato não é compatível.</span><div class="row2"><button class="btn" id="rt">Tentar novamente</button><button class="btn" id="dg" hidden>Diagnóstico</button></div><pre id="dgo" hidden></pre></div><div id="hud"><div class="hb"><span id="ht">0:00</span><div class="pbar" id="pbar" tabindex="0"><s id="pbuf"></s><u id="pu"></u><em id="ptip"></em></div><span id="hr2"></span></div><div class="cb"><button id="ppb" data-a="pp" aria-label="Reproduzir"></button><button data-a="bw" data-ic="bw" aria-label="Voltar 10 segundos"></button><button data-a="fw" data-ic="fw" aria-label="Avançar 10 segundos"></button><button class="zp" data-a="zd" data-ic="zd" aria-label="Canal anterior"></button><button class="zp" data-a="zu" data-ic="zu" aria-label="Próximo canal"></button><button class="zp" id="fvb" data-a="fv" aria-label="Favoritar canal">☆</button><button id="mub" data-a="mu" aria-label="Mudo"></button><input id="vol" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volume"><span class="sp"></span><button id="nxb" data-a="nx" data-ic="nx" aria-label="Próximo episódio" hidden></button><button id="cc" data-a="cc" data-ic="cc" aria-label="Legendas"></button><button id="stb" data-a="st" data-ic="gear" aria-label="Configurações"></button><button id="pipb" data-a="pip" data-ic="pip" aria-label="Picture in Picture" hidden></button><button id="fsb" data-a="fs" aria-label="Tela cheia"></button></div></div><button id="nxe" hidden><small>▶ Próximo episódio</small><b></b></button><div id="sm" hidden></div><input type="file" id="sf" accept=".srt,.vtt,text/vtt" hidden></div>
 
 <div id="toast"></div>
 <div id="boot"><div class="spin"></div><div id="bootmsg">Carregando…</div></div>
@@ -383,15 +387,15 @@ async function loadCatalog(){
   if(bad.length===4)throw Object.assign(new Error('Conectou ao servidor, mas não foi possível baixar o catálogo. Tente de novo, de preferência no Wi‑Fi.'),{keep:true});
   S.bad=bad;
   S.cat.m=arr(mc);S.cat.s=arr(sc);
-  S.items.m=arr(ms).map(x=>({t:'m',id:x.stream_id,name:x.name||'',img:x.stream_icon||'',cat:String(x.category_id),added:+x.added||0,ext:x.container_extension||'mp4',rating:x.rating}));
-  S.items.s=arr(ss).map(x=>({t:'s',id:x.series_id,name:x.name||'',img:x.cover||'',cat:String(x.category_id),added:+x.last_modified||0,rating:x.rating,bd:pick(x.backdrop_path),plot:x.plot||''}));
+  S.items.m=arr(ms).map(x=>({t:'m',id:x.stream_id,name:x.name||'',img:x.stream_icon||'',cat:String(x.category_id),added:+x.added||0,ext:x.container_extension||'mp4',rating:x.rating,q:nz(x.name)}));
+  S.items.s=arr(ss).map(x=>({t:'s',id:x.series_id,name:x.name||'',img:x.cover||'',cat:String(x.category_id),added:+x.last_modified||0,rating:x.rating,bd:pick(x.backdrop_path),plot:x.plot||'',q:nz(x.name)}));
   ['m','s'].forEach(k=>{S.by[k]={};S.items[k].forEach(it=>(S.by[k][it.cat]=S.by[k][it.cat]||[]).push(it))});
 }
 async function ensureLive(){
   if(S.liveOk)return;
   const [lc,lv]=await Promise.all([api('get_live_categories'),api('get_live_streams')]);
   S.cat.l=arr(lc);
-  S.items.l=arr(lv).map(x=>({t:'l',id:x.stream_id,name:x.name||'',img:x.stream_icon||'',cat:String(x.category_id)}));
+  S.items.l=arr(lv).map(x=>({t:'l',id:x.stream_id,name:x.name||'',img:x.stream_icon||'',cat:String(x.category_id),q:nz(x.name)}));
   S.by.l={};S.items.l.forEach(it=>(S.by.l[it.cat]=S.by.l[it.cat]||[]).push(it));
   S.liveOk=true;
 }
@@ -418,6 +422,7 @@ async function connect(cfg){
   showView('shell');
   try{go('home')}catch(e){$('#main').innerHTML='<div class="page"><p class="empty">Conectou, mas houve um erro ao montar a tela inicial: '+esc(e.message)+'</p></div>'}
   if(S.bad&&S.bad.length)setTimeout(()=>toast('Não carregou: '+S.bad.join(', ')),900);
+  setTimeout(()=>{ensureLive().catch(()=>{})},2500);
 }
 
 /* =================== histórico e minha lista =================== */
@@ -590,11 +595,11 @@ async function rLive(m){
   S.lc='all';drawLive();
   $('#lq').oninput=debounce(()=>{S.lshow=120;drawLive()},200);
 }
-function chanHtml(it){reg(it);return `<button class="f chan" data-live="${it.id}"><span class="cl">${it.img?`<img loading="lazy" src="${esc(it.img)}" alt="" onerror="this.remove()">`:ico('tv')}</span><span class="cn">${esc(it.name)}</span></button>`}
+function chanHtml(it){reg(it);return `<button class="f chan" data-live="${it.id}"><span class="cl">${it.img?`<img loading="lazy" decoding="async" src="${esc(it.img)}" alt="" onerror="this.remove()">`:ico('tv')}</span><span class="cn">${esc(it.name)}</span></button>`}
 function drawLive(){
   const q=nz(($('#lq')||{}).value||'').trim();
   let list=S.lc==='all'?S.items.l:(S.by.l[S.lc]||[]);
-  if(q)list=list.filter(x=>nz(x.name).includes(q));
+  if(q)list=list.filter(x=>(x.q||nz(x.name)).includes(q));
   S.llist=list;
   const g=$('#lgrid');if(!g)return;
   g.innerHTML=list.length?list.slice(0,S.lshow).map(chanHtml).join('')+(list.length>S.lshow?`<button class="f btn g more" data-act="more">Mostrar mais (${list.length-S.lshow})</button>`:''):'<p class="empty">Nenhum canal encontrado.</p>';
@@ -613,7 +618,7 @@ function doSearch(v){
   const n=nz(v).trim(),box=$('#sres');if(!box)return;
   if(n.length<2){box.innerHTML='<p class="empty">Digite ao menos 2 letras.</p>';return}
   if(!S.liveOk)ensureLive().then(()=>{if(S.route==='search'&&$('#q')&&nz($('#q').value).trim()===n)doSearch(v)}).catch(()=>{});
-  const f=a=>a.filter(x=>nz(x.name).includes(n)).slice(0,60);
+  const f=a=>a.filter(x=>(x.q||nz(x.name)).includes(n)).slice(0,60);
   const M=f(S.items.m),Sr=f(S.items.s),L=S.liveOk?f(S.items.l):[];
   S.llist=L;
   let h='';
@@ -633,6 +638,8 @@ function rAccount(m){
   <div class="kv"><span>Conexões</span><b>${esc(u.active_cons||0)} de ${esc(u.max_connections||'-')}</b></div>
   <div class="acts">
     <button class="f btn g" data-act="reload">Atualizar catálogo</button>
+    <button class="f btn g" data-act="nbt">Buffer de segurança: ${PS.nb?'Desligado':'Ligado'}</button>
+    <button class="f btn g" data-act="bufc">Tamanho do buffer: ${BL[PS.buf||'a'].nm}</button>
     <button class="f btn g" data-act="clearhist">Limpar “Continuar assistindo”</button>
     <button class="f btn g" data-act="clearfav">Limpar “Minha lista”</button>
     <button class="f btn w" data-act="logout">Sair da conta</button>
@@ -704,15 +711,16 @@ function immersive(on){try{const p=Imm();if(p)Promise.resolve(p[on?'enter':'exit
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&P.open)immersive(true)});
 
 /* configurações do player (guardadas no aparelho) */
-const PS=Object.assign({buf:'a',fit:'c',sub:0,vol:null,nb:0,an:1},ls.get('asp_ps',{}));
+const PS=Object.assign({buf:'a',fit:'c',sub:0,vol:null,nb:1,an:1,v:0},ls.get('asp_ps',{}));
 const psave=()=>ls.set('asp_ps',PS);
+if(PS.v<2){PS.nb=1;PS.v=2;psave()}   /* v2: buffer de segurança desligado por padrão (também em quem já tinha configurado) */
 /* buffer: Normal / Alto / Máximo. tg = segundos a acumular antes de (re)iniciar; lt = idem para canais ao vivo */
-const BL={n:{nm:'Normal',d:'Início rápido, usa menos memória',hl:30,hm:60,hs:60e6,tg:4,lt:2,st:384*1024,ls:3},a:{nm:'Alto',d:'Recomendado para evitar travamentos',hl:60,hm:120,hs:100e6,tg:10,lt:5,st:1024*1024,ls:5},x:{nm:'Máximo',d:'Mais estável, mas demora mais para iniciar e usa mais memória',hl:120,hm:240,hs:150e6,tg:25,lt:10,st:3*1024*1024,ls:8}};
+const BL={n:{nm:'Normal',d:'Início rápido, usa menos memória',hl:30,hm:60,hs:60e6,tg:4,lt:2,st:384*1024,ls:3,lh:20,lm:30,lb:20e6},a:{nm:'Alto',d:'Mais folga contra travamentos',hl:60,hm:120,hs:100e6,tg:10,lt:5,st:1024*1024,ls:4,lh:35,lm:60,lb:40e6},x:{nm:'Máximo',d:'Mais estável, mas demora mais para iniciar e usa mais memória',hl:120,hm:240,hs:150e6,tg:25,lt:10,st:3*1024*1024,ls:6,lh:60,lm:90,lb:80e6}};
 const bl=()=>BL[PS.buf]||BL.a;
 
 const P={open:false,o:null,live:false,saveT:0};
 const V=$('#v'),pbar=$('#pbar'),ptip=$('#ptip'),NX=$('#nxe');
-let H=null,MP=null,LT,PT=0,LOAD=0,RT={n:0,m:0},RB={on:0,iv:0,t0:0,me:0,skip:0,until:0,first:1,live:0,tg:10,hl:0},OT,CK,CT=0,hT,SMP='',ST=null,STm,STn=0,STt=0,lastBack=0,_pgT=0,WL=null,sd=false;
+let H=null,MP=null,LT,LWD,LZ,LS=null,LREC={n:0,t:0},PT=0,LOAD=0,RT={n:0,m:0},RB={on:0,iv:0,t0:0,me:0,skip:0,until:0,first:1,live:0,tg:10,hl:0},OT,CK,CT=0,hT,SMP='',ST=null,STm,STn=0,STt=0,lastBack=0,_pgT=0,WL=null,sd=false;
 const TV=()=>document.body.classList.contains('tv');
 const hasNext=o=>!!(o&&o.eps&&o.idx<o.eps.length-1);
 const curChan=()=>{const o=P.o;return o&&o.live&&o.queue?o.queue[o.qi]:null};
@@ -729,10 +737,10 @@ function rbTick(){bfUp();hudBuf();if(bufAhead(V)>=RB.tg||bfEnd(V)||(Date.now()-R
 function rbStop(res){clearInterval(RB.iv);RB.iv=0;if(!RB.on)return;RB.on=0;if(res){RB.me=1;V.play().catch(()=>{})}bfUp()}
 function rbReset(){clearInterval(RB.iv);RB.iv=0;RB.on=0;RB.me=0}
 function tryPlay(){V.play().catch(e=>{if(e&&e.name=='NotAllowedError'){V.muted=true;V._am=1;V.play().catch(()=>{});osd('Sem som. Toque ou pressione OK para ativar')}})}
-function stop(){clearTimeout(LT);rbReset();[...V.querySelectorAll('track')].forEach(t=>t.remove());if(H){try{H.destroy()}catch(e){}H=null}if(MP){try{MP.destroy()}catch(e){}MP=null}V.pause();V.removeAttribute('src');V.load()}
+function stop(){clearTimeout(LT);clearInterval(LWD);rbReset();[...V.querySelectorAll('track')].forEach(t=>t.remove());if(H){try{H.destroy()}catch(e){}H=null}if(MP){try{MP.destroy()}catch(e){}MP=null}V.pause();V.removeAttribute('src');V.load()}
 function fail(m){
   if(!P.open||!P.o)return;clearTimeout(LT);const o=P.o;
-  if(o.alt&&o.url!=o.alt){o.orig=o.orig||o.url;o.url=o.alt;return loadMedia()}
+  if(o.live&&LS&&LS.tk===PT)return stageFail(m||'erro do player');
   rbReset();LOAD=0;$('#pe').hidden=false;$('#pe span').textContent=m||'O servidor pode estar lento ou o formato não é compatível com este aparelho.';bfUp();hudShow();
 }
 const SRC={hls:['hls.min.js','https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js'],ts:['mpegts.js','https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.js']};
@@ -759,9 +767,10 @@ function loadMedia(nat){
   $('#pbuf').style.width='0';$('#pu').style.width='0';
   nxUp();pipUp();ccUp();favUp();hudShow();$('#pl').focus({preventScroll:true});
   const u=o.url,hls=/\.m3u8(\?|$)/i.test(u);
-  RB.first=1;RB.hl=hls&&live?1:0;RB.skip=RB.hl||PS.nb?1:0;RB.live=live;RB.tg=live?B.lt:B.tg;RB.until=0;RT={n:0,m:0};LOAD=1;bfUp();
+  RB.first=1;RB.hl=0;RB.skip=PS.nb?1:0;RB.live=live;RB.tg=live?B.lt:B.tg;RB.until=0;RT={n:0,m:0};LOAD=1;bfUp();
   clearTimeout(LT);LT=setTimeout(()=>{if(!V.readyState)fail('O servidor demorou para responder. Tente novamente.')},20000);
   V.onloadedmetadata=()=>{clearTimeout(LT);const t=o.start;if(!live&&t>5&&(!V.duration||t<V.duration*.95))V.currentTime=t;hudUp()};
+  if(live){liveBoot(o,tk);return}
   if(hls){
     lib('hls',()=>{
       if(tk!==PT)return;
@@ -796,10 +805,139 @@ function loadMedia(nat){
   }else{V.src=u;tryPlay()}   /* mp4, mkv, avi e demais arquivos: o próprio aparelho decodifica */
 }
 
+
+/* ======== TV ao vivo: motores em cascata, reconexão automática e diagnóstico ======== */
+const LNAME={nhls:'HLS nativo',nts:'TS nativo',hls:'HLS (hls.js)',ts:'TS (mpegts.js)'};
+const LTMO={nhls:12000,nts:12000,hls:15000,ts:15000};
+function liveOrder(){
+  const apk=isApk(),nat=!!V.canPlayType('application/vnd.apple.mpegurl');
+  let L=apk?['nhls','nts','hls','ts']:nat?['nhls','hls','ts','nts']:['hls','ts','nts'];
+  const last=ls.get('asp_lm',null);
+  if(last&&L.includes(last))L=[last].concat(L.filter(k=>k!==last));
+  return L;
+}
+function liveBoot(o,tk){
+  LS={tk,ord:liveOrder(),i:0,n:0,errs:[],ok:0,good:0};LREC={n:0,t:Date.now()};
+  $('#dgo').hidden=true;
+  liveStage();
+}
+function liveStage(){
+  const o=P.o,S_=LS;if(!o||!S_||S_.tk!==PT||!P.open)return;
+  const k=S_.ord[S_.i];if(!k)return liveFail();
+  const c=curChan();if(!c)return liveFail();
+  const st=++S_.n,tk=S_.tk,B=bl(),ok_=()=>LS===S_&&S_.n===st&&tk===PT&&P.open;
+  const url=(k=='nhls'||k=='hls')?liveUrl(c,'m3u8'):liveUrl(c,'ts');
+  stop();LOAD=1;S_.ok=0;
+  RB.skip=(k=='nhls'||k=='hls'||PS.nb)?1:0;RB.live=1;RB.tg=B.lt;
+  $('#pe').hidden=true;bfUp();
+  clearTimeout(LT);LT=setTimeout(()=>{if(ok_())stageFail('sem resposta em '+LTMO[k]/1000+'s')},LTMO[k]);
+  if(k=='nhls'||k=='nts'){V.src=url;tryPlay();return}
+  if(k=='hls'){
+    lib('hls',()=>{
+      if(!ok_())return;
+      if(!window.Hls||!Hls.isSupported())return stageFail('hls.js não suportado');
+      const h=H=new Hls({lowLatencyMode:false,enableWorker:true,liveSyncDurationCount:B.ls,liveMaxLatencyDurationCount:B.ls*3,maxBufferLength:B.lh,maxMaxBufferLength:B.lm,maxBufferSize:B.lb,backBufferLength:8,startFragPrefetch:true,capLevelToPlayerSize:true,abrBandWidthFactor:.8,abrBandWidthUpFactor:.6,manifestLoadingTimeOut:9000,manifestLoadingMaxRetry:1,levelLoadingMaxRetry:3,fragLoadingTimeOut:14000,fragLoadingMaxRetry:4,nudgeMaxRetry:10});
+      h.loadSource(url);h.attachMedia(V);
+      h.on(Hls.Events.MANIFEST_PARSED,()=>tryPlay());
+      h.on(Hls.Events.ERROR,(ev,d)=>{
+        if(H!==h||!d.fatal||!ok_())return;
+        const T=Hls.ErrorTypes;
+        if(d.type==T.MEDIA_ERROR&&RT.m<2){RT.m++;h.recoverMediaError();return}
+        stageFail((d.details||'erro')+(d.response&&d.response.code?' (HTTP '+d.response.code+')':''));
+      });
+    });
+    return;
+  }
+  lib('ts',()=>{
+    if(!ok_())return;
+    if(!window.mpegts||!mpegts.isSupported())return stageFail('mpegts.js não suportado');
+    const m=MP=mpegts.createPlayer({type:'mpegts',isLive:true,url},{enableWorker:true,enableStashBuffer:true,stashInitialSize:B.st,liveBufferLatencyChasing:false,autoCleanupSourceBuffer:true,autoCleanupMaxBackwardDuration:30,autoCleanupMinBackwardDuration:15,lazyLoad:false});
+    m.attachMediaElement(V);
+    m.on(mpegts.Events.ERROR,(t,d)=>{if(MP!==m||!ok_())return;stageFail(String(t||'erro')+(d&&d.msg?' '+d.msg:''))});
+    m.load();tryPlay();
+  });
+}
+function stageFail(why){
+  const S_=LS;if(!S_||S_.tk!==PT||!P.open)return;
+  clearTimeout(LT);
+  if(S_.good)return liveReconnect(why);
+  S_.errs.push((LNAME[S_.ord[S_.i]]||'?')+': '+why);
+  S_.i++;liveStage();
+}
+function liveReconnect(why){
+  const S_=LS;if(!S_||S_.tk!==PT)return;
+  const now=Date.now();if(now-LREC.t>90000)LREC.n=0;LREC.t=now;
+  if(++LREC.n>5){S_.good=0;S_.errs.push((LNAME[S_.ord[S_.i]]||'?')+': '+why+' (várias quedas seguidas)');S_.i++;return liveStage()}
+  S_.ok=0;stop();LOAD=1;bfUp();osd('Reconectando…');
+  clearTimeout(LZ);LZ=setTimeout(()=>{if(LS===S_&&S_.tk===PT&&P.open)liveStage()},500*LREC.n);
+}
+function liveWatch(){
+  clearInterval(LWD);let lt=-1,since=Date.now();
+  LWD=setInterval(()=>{
+    if(!P.open||!P.o||!P.o.live||!LS||LS.tk!==PT||!LS.ok)return;
+    if(V.paused||RB.on||V.seeking){since=Date.now();return}
+    const t=V.currentTime;
+    if(t!==lt){lt=t;since=Date.now();return}
+    if(Date.now()-since>9000){since=Date.now();stageFail('imagem parada')}
+  },2000);
+}
+function liveFail(){
+  const S_=LS;rbReset();LOAD=0;clearInterval(LWD);
+  const e=(S_&&S_.errs.length)?S_.errs.join(' · '):'sem detalhes';
+  $('#pe b').textContent='Não foi possível abrir este canal.';
+  $('#pe span').textContent='Testamos '+(S_?S_.ord.length:4)+' formas de conexão e nenhuma funcionou ('+e+'). '+(isApk()?'Toque em Diagnóstico para ver o que o servidor responde.':'Este navegador pode estar bloqueando a conexão (CORS); no aplicativo (APK) isso não acontece.');
+  $('#dg').hidden=false;$('#pe').hidden=false;bfUp();hudShow();
+  const d=$('#dg');d.focus({preventScroll:true});
+}
+async function liveDiag(){
+  const c=curChan(),box=$('#dgo');if(!c)return;
+  box.hidden=false;const L=[];const out=t=>{L.push(t);box.textContent=L.join('\n')};box.textContent='Testando…';
+  const cp=window.Capacitor&&Capacitor.Plugins&&Capacitor.Plugins.CapacitorHttp;
+  const req=async(url,method,to)=>{
+    const t0=performance.now(),ms=()=>Math.round(performance.now()-t0);
+    try{
+      if(cp&&isApk()){const r=await cp.request({url,method,responseType:'text',readTimeout:to,connectTimeout:to});const h=r.headers||{};return{ok:1,status:r.status,type:h['Content-Type']||h['content-type']||'',url:r.url||url,data:typeof r.data=='string'?r.data:'',ms:ms()}}
+      const ctl=new AbortController(),tm=setTimeout(()=>ctl.abort(),to);
+      const f=await fetch(url,{method,signal:ctl.signal});clearTimeout(tm);
+      return{ok:1,status:f.status,type:f.headers.get('content-type')||'',url:f.url||url,data:method=='GET'?await f.text():'',ms:ms()};
+    }catch(e){return{ok:0,err:String((e&&e.message)||e),ms:ms()}}
+  };
+  const host=u=>{try{return new URL(u).host}catch(e){return u}};
+  const line=(t,r)=>r.ok?`${t}: HTTP ${r.status}${r.type?' · '+r.type.split(';')[0]:''} · ${r.ms}ms${r.url&&host(r.url)!==host(r.req)?' · desviou para '+host(r.url):''}`:`${t}: falhou (${r.err}) · ${r.ms}ms`;
+  const info=S.info&&S.info.user_info||{};
+  out(`Canal: ${c.name}`);out(`Conexões: ${info.active_cons||0} de ${info.max_connections||'?'} · Conta: ${info.status||'?'}`);
+  const hints=[];
+  const u1=liveUrl(c,'m3u8');let r=await req(u1,'GET',9000);r.req=u1;out(line('1) Lista HLS (.m3u8)',r));
+  if(r.ok){
+    if(r.status>=400)hints.push(r.status);
+    if(r.data){
+      if(/#EXTM3U/.test(r.data)){
+        const ls_=r.data.split(/\r?\n/).map(x=>x.trim()),vi=ls_.findIndex(x=>/^#EXT-X-STREAM-INF/.test(x));
+        let pl=r.data,pu=r.url||u1;
+        if(vi>=0){const rel=ls_.slice(vi+1).find(x=>x&&x[0]!='#');if(rel){let abs=rel;try{abs=new URL(rel,pu).href}catch(e){}out('   lista mestra · abrindo qualidade: '+host(abs));const r2=await req(abs,'GET',9000);r2.req=abs;out(line('2) Lista da qualidade',r2));pl=r2.data||'';pu=r2.url||abs;if(r2.ok&&r2.status>=400)hints.push(r2.status)}}
+        const seg=pl.split(/\r?\n/).map(x=>x.trim()).find(x=>x&&x[0]!='#');
+        if(seg){let abs=seg;try{abs=new URL(seg,pu).href}catch(e){}const r3=await req(abs,'HEAD',9000);r3.req=abs;out(line('3) Primeiro trecho de vídeo',r3));if(r3.ok&&r3.status>=400)hints.push(r3.status)}
+        else out('   a lista não tem trechos de vídeo');
+      }else out('   resposta não é uma lista HLS: '+JSON.stringify(r.data.slice(0,90)));
+    }
+  }
+  const u2=liveUrl(c,'ts');r=await req(u2,'HEAD',7000);r.req=u2;out(line('4) Fluxo TS (.ts)',r));
+  if(r.ok&&r.status>=400)hints.push(r.status);
+  let tip='';
+  const act=+info.active_cons||0,mx=+info.max_connections||0;
+  if(hints.some(x=>x==401||x==403||x==458))tip='O servidor recusou o acesso (usuário/senha, IP ou aparelho bloqueado pelo provedor).';
+  else if(hints.some(x=>x==404))tip='O servidor diz que este canal não existe ou está fora do ar. Teste outro canal.';
+  else if(hints.some(x=>x==429||x==509||x==512)||(mx&&act>=mx))tip='Limite de conexões simultâneas atingido. Feche outros aparelhos que usam esta conta e tente de novo.';
+  else if(hints.some(x=>x>=500))tip='O servidor do provedor está com problema (erro '+hints.find(x=>x>=500)+'). Tente mais tarde.';
+  if(tip)out('\n⚠ '+tip);
+  out('\nEnvie um print desta tela.');
+}
+$('#dg').onclick=liveDiag;
+
 /* ---- eventos do vídeo ---- */
-V.onerror=()=>{if(!P.open||!P.o||!V.getAttribute('src'))return;const c=V.error&&V.error.code;fail(c==4?'Formato de vídeo não suportado neste aparelho ou arquivo indisponível.':c==2?'Falha de rede ao carregar o vídeo.':'')};
+V.onerror=()=>{if(!P.open||!P.o||!V.getAttribute('src'))return;const c=V.error&&V.error.code;fail(c==4?'formato ou endereço não suportado pelo aparelho':c==2?'falha de rede':c==3?'erro ao decodificar':'erro do player')};
 V.onwaiting=()=>{if(!RB.skip&&!RB.on&&!LOAD&&!V.seeking&&!V.paused&&!V.ended)rbStart();bfUp()};
-V.onplaying=()=>{LOAD=0;RT.n=0;clearTimeout(LT);if(RB.first){RB.first=0;if(!RB.skip&&!RB.on&&bufAhead(V)<RB.tg&&!bfEnd(V))rbStart()}bfUp()};
+V.onplaying=()=>{LOAD=0;RT.n=0;clearTimeout(LT);if(P.live&&LS&&LS.tk===PT){LS.ok=1;LS.good=1;try{ls.set('asp_lm',LS.ord[LS.i])}catch(e){}liveWatch()}if(RB.first){RB.first=0;if(!RB.skip&&!RB.on&&bufAhead(V)<RB.tg&&!bfEnd(V))rbStart()}bfUp()};
 V.onplay=()=>{if(RB.me)RB.me=0;else if(RB.on){rbStop(0);RB.until=Date.now()+8000}bfUp();hudUp()};
 V.onpause=()=>{if(V._ap)V._ap=0;else if(P.open)hudShow();bfUp()};
 ['canplay','seeking','seeked','loadstart','progress','emptied'].forEach(n=>V.addEventListener(n,()=>{if(n=='progress'){const t=performance.now();if(t-_pgT<600)return;_pgT=t;hudBuf()}bfUp()}));
@@ -891,12 +1029,12 @@ function auList(){if(H&&H.audioTracks&&H.audioTracks.length>1)return H.audioTrac
 function stOpen(p){
   const o=P.o;if(!o)return;const live=!!o.live,row=(k,l,val)=>`<button data-o="p:${k}"><span>${l}</span><em>${esc(val)} ›</em></button>`,opt=(k,l,on,sub)=>`<button data-o="${k}" class="${on?'on':''}"><span class="ot">${esc(l)}${sub?`<small>${esc(sub)}</small>`:''}</span>${on?'<i class="ck">✓</i>':''}</button>`,hd=t=>`<button data-o="p:main" class="hdr">‹ ${t}</button>`;let h='';
   if(p=='spd')h=hd('Velocidade')+SPD.map(r=>opt('spd:'+r,r==1?'Normal':r+'x',V.playbackRate==r)).join('');
-  else if(p=='buf')h=hd('Buffer')+opt('nb:t','Buffer de segurança',!PS.nb,'Pausa para acumular vídeo antes de continuar')+Object.entries(BL).map(([k,b])=>opt('buf:'+k,b.nm,(PS.buf||'a')==k,b.d)).join('');
+  else if(p=='buf')h=hd('Buffer')+opt('nb:t','Buffer de segurança',!PS.nb,'Pausa o vídeo para acumular antes de continuar (desligado por padrão)')+'<b>Tamanho do buffer</b>'+Object.entries(BL).map(([k,b])=>opt('buf:'+k,b.nm,(PS.buf||'a')==k,b.d)).join('');
   else if(p=='fit')h=hd('Proporção da imagem')+Object.entries(FITS).map(([k,n])=>opt('fit:'+k,n,(PS.fit||'c')==k,{c:'Mostra o vídeo inteiro',o:'Preenche a tela, cortando as bordas',f:'Estica para ocupar a tela'}[k])).join('');
   else if(p=='q')h=hd('Qualidade')+opt('q:-1','Automática',H&&H.autoLevelEnabled,'Ajusta conforme a sua conexão')+qlList().map(l=>opt('q:'+l.i,l.n,H&&!H.autoLevelEnabled&&H.currentLevel==l.i)).join('');
   else if(p=='au')h=hd('Áudio')+auList().map(a=>opt('au:'+a.i,a.n,a.on)).join('');
   else{p='main';const cl=qlList(),al=auList(),lv=H&&H.levels&&H.levels[H.currentLevel];
-    h='<b>Configurações</b>'+(cl.length?row('q','Qualidade',H.autoLevelEnabled?'Automática':lv&&lv.height?lv.height+'p':'Manual'):'')+(al.length?row('au','Áudio',(al.find(a=>a.on)||al[0]).n):'')+(live?'':row('spd','Velocidade',V.playbackRate==1?'Normal':V.playbackRate+'x'))+row('buf','Buffer',PS.nb?'Desativado':bl().nm)+row('fit','Proporção da imagem',FITS[PS.fit||'c'])+(hasNext(o)?opt('an:t','Reproduzir próximo episódio automaticamente',PS.an!==0):'')+(o.alt?opt('fmt','Alternar formato do canal',0,'Atual: '+(o.url==o.alt?'MPEG-TS':'HLS')):'');
+    h='<b>Configurações</b>'+(cl.length?row('q','Qualidade',H.autoLevelEnabled?'Automática':lv&&lv.height?lv.height+'p':'Manual'):'')+(al.length?row('au','Áudio',(al.find(a=>a.on)||al[0]).n):'')+(live?'':row('spd','Velocidade',V.playbackRate==1?'Normal':V.playbackRate+'x'))+row('buf','Buffer',PS.nb?'Desligado':'Ligado')+row('fit','Proporção da imagem',FITS[PS.fit||'c'])+(hasNext(o)?opt('an:t','Reproduzir próximo episódio automaticamente',PS.an!==0):'');
   }
   smShow(h,p);
 }
@@ -943,7 +1081,7 @@ function pact(a,n){
 /* ---- fechar / voltar ---- */
 function closePlayer(){
   if(!P.open)return;
-  saveProg(true);stop();wake(false);P.open=false;P.o=null;PT++;clearTimeout(hT);
+  saveProg(true);clearTimeout(LZ);LS=null;stop();wake(false);P.open=false;P.o=null;PT++;clearTimeout(hT);$('#dgo').hidden=true;$('#dg').hidden=true;
   $('#sm').hidden=true;SMP='';NX.hidden=true;$('#pl').hidden=true;$('#pl').classList.remove('ui');$('#hud').classList.remove('on');bfUp();
   try{if(document.fullscreenElement)document.exitFullscreen()}catch(e){}
   immersive(false);
@@ -952,7 +1090,7 @@ function closePlayer(){
   refreshContinue();
 }
 $('#pb').onclick=()=>back();
-$('#rt').onclick=()=>{const o=P.o;if(!o)return;if(o.orig){o.url=o.orig;delete o.orig}loadMedia()};
+$('#rt').onclick=()=>{const o=P.o;if(!o)return;if(o.orig){o.url=o.orig;delete o.orig}$('#dgo').hidden=true;$('#dg').hidden=true;$('#pe b').textContent='Não foi possível reproduzir este conteúdo.';loadMedia()};
 function contCards(L){return L.map(h=>card({t:h.t,id:h.id,name:h.name,img:h.img,ext:h.ext},{resume:h.key,pct:h.dur?Math.min(100,h.pos/h.dur*100):0})).join('')}
 function refreshContinue(){
   if(S.route!=='home')return;
@@ -972,7 +1110,9 @@ function zap(d){
   const o=P.o;if(!o||!o.live||!o.queue||o.queue.length<2)return;
   const i=(o.qi+d+o.queue.length)%o.queue.length,it=o.queue[i];
   P.o=Object.assign({},o,{url:liveUrl(it,'m3u8'),alt:liveUrl(it,'ts'),orig:undefined,title:it.name,qi:i});
-  loadMedia();osd(it.name);
+  $('#pt').textContent=it.name;favUp();osd(it.name);
+  PT++;LS=null;stop();LOAD=1;$('#pe').hidden=true;bfUp();
+  clearTimeout(LZ);LZ=setTimeout(()=>{if(P.open&&P.o&&P.o.live)loadMedia()},350);
 }
 function playMovie(it){
   const key='m:'+it.id,h=hist()[key];
@@ -1085,6 +1225,8 @@ document.addEventListener('click',e=>{
     case 'mfav':{toggleFav(M.it);const on=isFav(M.it.t+':'+M.it.id);t.innerHTML=ico(on?'check':'add')+'<span>Minha lista</span>';if(S.route==='list')rList($('#main'));break}
     case 'more':S.lshow+=120;drawLive();break;
     case 'reload':busy('Atualizando catálogo…');connect(S.cfg).catch(er=>showLogin(errMsg(er)));break;
+    case 'nbt':PS.nb=PS.nb?0:1;psave();rAccount($('#main'));{const f=$('[data-act=nbt]');f&&document.body.classList.contains('usingpad')&&f.focus()}break;
+    case 'bufc':{const ks=Object.keys(BL),i=ks.indexOf(PS.buf||'a');PS.buf=ks[(i+1)%ks.length];psave();rAccount($('#main'));const f=$('[data-act=bufc]');f&&document.body.classList.contains('usingpad')&&f.focus();break}
     case 'clearhist':ls.set('asp_hist',{});toast('Histórico limpo');break;
     case 'clearfav':ls.set('asp_fav',[]);toast('Lista limpa');break;
     case 'logout':ls.set('asp_cfg',null);S.cfg=null;S.info=null;showLogin();break;
